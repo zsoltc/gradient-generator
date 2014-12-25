@@ -20,7 +20,9 @@
                     ctx = canvas.getContext('2d'),
                     imageData = ctx.getImageData(0, 0, canvas.getAttribute('width'), canvas.getAttribute('height')),
                     pixels = imageData.data,
+                    gradient = GradientGenerator.createGradient('#000000 #c50106 #f5f100 #ffffff'),
                     val,
+                    color,
                     base,
                     x,
                     y;
@@ -28,6 +30,7 @@
                 for (y = 0; y < imageData.height; ++y) {
                     for (x = 0; x < imageData.width; ++x) {
                         val = (x + y) / (imageData.width + imageData.height);
+                        color = gradient.getColorAt(val);
                         base = (y * imageData.width + x) * 4;
                         pixels[base] = val * 255;
                         pixels[base + 1] = val * 255;
