@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>gradient-generator example</title>
+	</head>
+
+	<body>
+		<!--[if lt IE 9]>
+			<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<canvas id="canvas" width="500" height="500" style="background: black"></canvas>
+
+		<script src="../bin/gradient-generator.dev.js"></script>
+
+		<script>
+			(function () {
+				var canvas = document.getElementById('canvas'),
+					ctx = canvas.getContext('2d'),
+					imageData = ctx.getImageData(0, 0, canvas.getAttribute('width'), canvas.getAttribute('height')),
+					pixels = imageData.data,
+					val,
+					base,
+					x,
+					y;
+
+				for (y = 0; y < imageData.height; ++y) {
+					for (x = 0; x < imageData.width; ++x) {
+						val = (x + y) / (imageData.width + imageData.height);
+						base = (y * imageData.width + x) * 4;
+						pixels[base] = val * 255;
+						pixels[base + 1] = val * 255;
+						pixels[base + 2] = val * 255;
+						pixels[base + 3] = 255;
+					}
+				}
+
+				ctx.putImageData(imageData, 0, 0);
+			})();
+		</script>
+	</body>
+</html>
