@@ -3,7 +3,6 @@ function createGradient(colorStops) {
 }
 
 function Gradient() {
-
 }
 
 Gradient.prototype.getColorAt = function (value) {
