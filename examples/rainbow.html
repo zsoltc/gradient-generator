@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>gradient-generator example</title>
+        <title>rainbow</title>
     </head>
 
     <body>
@@ -20,7 +20,7 @@
                     ctx = canvas.getContext('2d'),
                     imageData = ctx.getImageData(0, 0, canvas.getAttribute('width'), canvas.getAttribute('height')),
                     pixels = imageData.data,
-                    gradient = GradientGenerator.createGradient('#000000 #c50106 #f5f100 #ffffff'),
+                    gradient = GradientGenerator.createGradient('#ff0000 #ffff00 #00ff00 #00ffff #0000ff'),
                     val,
                     color,
                     base,
