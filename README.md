@@ -3,9 +3,10 @@
 A small JavaScript library for creating smooth gradients.
 
 ## Getting Started
-Download the [development version][max].
+Download the [development][max] or the [minified][min] version.
 
 [max]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.dev.js
+[min]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.js
 
 Example usage:
 
