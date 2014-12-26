@@ -34,4 +34,4 @@ console.log(color);
 There is also a canvas example which might be more interesting than logging RGB values in the console. :)
 
 ## AMD, CommonJS
-The project is built with [Browserify](http://browserify.org) --standalone option which generates [UMD](http://davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) modules, so there should be no problem using this library in these environments.
+The project is built with [Browserify](http://browserify.org) `--standalone` option which generates [UMD](http://davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) modules, so there should be no problem using this library in these environments.
