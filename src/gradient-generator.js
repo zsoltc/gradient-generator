@@ -8,7 +8,7 @@ function createGradient(colorStops) {
         i;
 
     if (stopsArray.length < 2) {
-        throw "At least 2 colors are needed to create a gradient.";
+        throw 'At least 2 colors are needed to create a gradient.';
     }
 
     for (i = 0; i < stopsArray.length; ++i) {

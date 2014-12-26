@@ -9,7 +9,7 @@ function createGradient(colorStops) {
         i;
 
     if (stopsArray.length < 2) {
-        throw "At least 2 colors are needed to create a gradient.";
+        throw 'At least 2 colors are needed to create a gradient.';
     }
 
     for (i = 0; i < stopsArray.length; ++i) {
@@ -59,10 +59,23 @@ Gradient.prototype.getColorBytesAt = function (value) {
     var color = this.getColorAt(value);
 
     return {
-        r: color.r * 255,
-        g: color.g * 255,
-        b: color.b * 255
+        r: Math.floor(color.r * 255),
+        g: Math.floor(color.g * 255),
+        b: Math.floor(color.b * 255)
     };
+};
+
+Gradient.prototype.getColorHexAt = function (value) {
+    var color = this.getColorBytesAt(value),
+        r = color.r.toString(16),
+        g = color.g.toString(16),
+        b = color.b.toString(16);
+
+    r = r.length == 1 ? '0' + r : r;
+    g = g.length == 1 ? '0' + g : g;
+    b = b.length == 1 ? '0' + b : b;
+
+    return '#' + r + g + b;
 };
 
 function lerp(a, b, t) {
