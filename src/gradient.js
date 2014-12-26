@@ -25,9 +25,9 @@ Gradient.prototype.getColorBytesAt = function (value) {
     var color = this.getColorAt(value);
 
     return {
-        r: Math.floor(color.r * 255),
-        g: Math.floor(color.g * 255),
-        b: Math.floor(color.b * 255)
+        r: Math.round(color.r * 255),
+        g: Math.round(color.g * 255),
+        b: Math.round(color.b * 255)
     };
 };
 
