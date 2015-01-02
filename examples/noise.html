@@ -14,7 +14,7 @@
         <canvas id="canvas-color" width="500" height="500" style="background: black"></canvas>
 
         <script src="../bin/gradient-generator.dev.js"></script>
-        <script src="lib/perlin.js"></script>
+        <script src="lib/worley-noise.min.js"></script>
 
         <script>
             (function () {
@@ -27,17 +27,21 @@
                     imageData2 = ctx2.getImageData(0, 0, canvas2.getAttribute('width'), canvas2.getAttribute('height')),
                     pixels2 = imageData2.data,
                     gradient = GradientGenerator.createGradient('#000000 #c50106 #f5f100 #ffffff'),
+                    noise = new WorleyNoise(50),
+                    map,
                     val,
                     color,
                     base,
                     x,
                     y;
 
-                noise.seed(Math.random());
+                map = noise.getNormalizedMap(imageData1.width, function (e, m) {
+                    return e(2) - e(1);
+                });
 
                 for (y = 0; y < imageData1.height; ++y) {
                     for (x = 0; x < imageData1.width; ++x) {
-                        val = noise.simplex2(x / 100, y / 100) / 2 + 0.5;
+                        val = map[y * imageData1.width + x];
                         color = gradient.getColorBytesAt(val);
                         base = (y * imageData1.width + x) * 4;
 
