@@ -3,7 +3,7 @@
 A small JavaScript library for creating smooth gradients.
 
 ## What is it?
-A library which you can use to map values between 0.0 and 1.0 to colors by defining gradients. For example you can turn the output of a [noise](https://github.com/josephg/noisejs) function to a nicely colored image:
+A library which you can use to map values between 0.0 and 1.0 to colors by defining gradients. For example you can turn the output of a [noise](https://github.com/zsoltc/worley-noise) function into a nicely colored image:
 
 ![alt tag](img/noise-gray.png) ![alt tag](img/noise-color.png)
 
@@ -11,7 +11,7 @@ A library which you can use to map values between 0.0 and 1.0 to colors by defin
 Download the [development][max] or the [minified][min] version.
 
 [max]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.dev.js
-[min]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.js
+[min]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.min.js
 
 Example usage:
 
