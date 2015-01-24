@@ -26,7 +26,7 @@
                     ctx2 = canvas2.getContext('2d'),
                     imageData2 = ctx2.getImageData(0, 0, canvas2.getAttribute('width'), canvas2.getAttribute('height')),
                     pixels2 = imageData2.data,
-                    gradient = GradientGenerator.createGradient('#000000 #c50106 #f5f100 #ffffff'),
+                    gradient = GradientGenerator.createGradient(['#000000', '#c50106', '#f5f100', '#ffffff']),
                     noise = new WorleyNoise(50),
                     map,
                     val,

@@ -20,7 +20,7 @@
                     ctx = canvas.getContext('2d'),
                     imageData = ctx.getImageData(0, 0, canvas.getAttribute('width'), canvas.getAttribute('height')),
                     pixels = imageData.data,
-                    gradient = GradientGenerator.createGradient('#ff0000 #ffff00 #00ff00 #00ffff #0000ff'),
+                    gradient = GradientGenerator.createGradient(['#ff0000', '#ffff00', '#00ff00', '#00ffff', '#0000ff']),
                     val,
                     color,
                     base,
