@@ -2,30 +2,11 @@
 var Gradient = require('./gradient.js');
 
 function createGradient(stops) {
-    /*var defaultStep = 1 / (colorStops.length - 1),
-        stops = [],
-        parts,
-        i;*/
-
     if (stops.length < 2) {
         throw 'At least 2 colors are needed to create a gradient.';
     }
 
     return new Gradient(stops);
-
-    /*for (i = 0; i < colorStops.length; ++i) {
-        parts = colorStops[i].split(':');
-        parts[1] = parts[1] ? parts[1] : i * defaultStep;
-
-        stops.push({
-            r: parseInt(parts[0].substring(1, 3), 16) / 255,
-            g: parseInt(parts[0].substring(3, 5), 16) / 255,
-            b: parseInt(parts[0].substring(5, 7), 16) / 255,
-            stopValue: parseFloat(parts[1])
-        });
-    }
-
-    return new Gradient(stops);*/
 }
 
 module.exports = {
@@ -96,10 +77,6 @@ Gradient.prototype._init = function (stops) {
     ctx.fillRect(0, 0, this._width, 1);
     this._pixels = ctx.getImageData(0, 0, this._width, 1).data;
 };
-
-function lerp(a, b, t) {
-    return a + t * (b - a);
-}
 
 module.exports = Gradient;
 
