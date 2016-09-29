@@ -1,5 +1,5 @@
 {
-  "name": "webpack-library-starter",
+  "name": "gradient-generator",
   "version": "1.0.0",
   "description": "Color gradient generator",
   "main": "dist/gradient-generator.js",
