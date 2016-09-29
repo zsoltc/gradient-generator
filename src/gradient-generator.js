@@ -1,4 +1,4 @@
-var Gradient = require('./gradient.js');
+import Gradient from './gradient.js';
 
 function createGradient(stops) {
     if (stops.length < 2) {
@@ -8,6 +8,4 @@ function createGradient(stops) {
     return new Gradient(stops);
 }
 
-module.exports = {
-    createGradient: createGradient
-};
+export { createGradient };

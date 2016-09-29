@@ -68,4 +68,4 @@ Gradient.prototype._init = function (stops) {
     this._pixels = ctx.getImageData(0, 0, this._width, 1).data;
 };
 
-module.exports = Gradient;
+export default Gradient;
