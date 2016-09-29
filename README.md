@@ -20,7 +20,7 @@ Example usage:
 <script>
 // Creates a fire gradient with 4 color stops (black -> red -> yellow -> white).
 // The gradient ranges from 0 to 1 (0: black, 0.33: red, 0.66: yellow, 1: white).
-var gradient = GradientGenerator.createGradient('#000000 #c50106 #f5f100 #ffffff');
+var gradient = GradientGenerator.createGradient(['#000000', '#c50106', '#f5f100', '#ffffff']);
 
 // Gets color at 0.4 (somewhere between red and yellow).
 // RGB values are between 0 and 1.
