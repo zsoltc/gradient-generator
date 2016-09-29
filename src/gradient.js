@@ -38,6 +38,12 @@ Gradient.prototype.getColorHexAt = function (value) {
     return '#' + r + g + b;
 };
 
+Gradient.prototype.getColorRGBAStringAt = function (value) {
+    var bytes = this.getColorBytesAt(value);
+
+    return 'rgba(' + bytes.r + ',' + bytes.g + ',' + bytes.b + ',' + (bytes.a / 255) + ')';
+};
+
 Gradient.prototype._init = function (stops) {
     var defaultStep = 1 / (stops.length - 1),
         canvas = document.createElement('canvas'),
