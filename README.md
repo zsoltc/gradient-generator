@@ -10,13 +10,13 @@ A library which you can use to map values between 0.0 and 1.0 to colors by defin
 ## Getting Started
 Download the [development][max] or the [minified][min] version.
 
-[max]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.dev.js
-[min]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/bin/gradient-generator.min.js
+[max]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/dist/gradient-generator.js
+[min]: https://raw.githubusercontent.com/zsoltc/gradient-generator/master/dist/gradient-generator.min.js
 
 Example usage:
 
 ```html
-<script src="gradient-generator.dev.js"></script>
+<script src="gradient-generator.js"></script>
 <script>
 // Creates a fire gradient with 4 color stops (black -> red -> yellow -> white).
 // The gradient ranges from 0 to 1 (0: black, 0.33: red, 0.66: yellow, 1: white).
@@ -37,7 +37,4 @@ color = gradient.getColorHexAt(0.4);
 console.log(color);
 </script>
 ```
-There are also some canvas examples which might be more interesting than logging RGB values in the console. :)
-
-## AMD, CommonJS
-The project is built with [Browserify](http://browserify.org) `--standalone` option which generates [UMD](http://davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) modules, so there should be no problem using this library in these environments.
+There are also some canvas examples which might be more interesting than logging RGB values in the console.
