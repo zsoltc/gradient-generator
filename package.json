@@ -1,0 +1,29 @@
+{
+  "name": "webpack-library-starter",
+  "version": "1.0.0",
+  "description": "Color gradient generator",
+  "main": "dist/gradient-generator.js",
+  "scripts": {
+    "build": "webpack --mode=build",
+    "dev": "webpack --progress --colors --watch --mode=dev",
+    "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+  },
+  "devDependencies": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zsoltc/gradient-generator.git"
+  },
+  "keywords": [
+    "color",
+    "gradient",
+    "generator"
+  ],
+  "author": "Zsolt Czinege",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsoltc/gradient-generator/issues"
+  },
+  "homepage": "https://github.com/zsoltc/gradient-generator"
+}
