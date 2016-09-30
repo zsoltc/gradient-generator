@@ -40,7 +40,8 @@ module.exports = {
         loader: 'babel-loader',
         include: paths.src,
         query: {
-          presets: ['es2015']
+          presets: ['es2015'],
+          cacheDirectory: true
         }
       }
     ],
