@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
-var dev = require('yargs').argv.mode === 'dev';
+
+var prod = process.env.NODE_ENV === 'production';
 var libraryName = 'gradient-generator';
 var globalName = 'GradientGenerator';
 var plugins = [];
@@ -10,7 +11,7 @@ var paths = {
   entry: path.join(__dirname, 'src', libraryName + '.js')
 };
 
-if (!dev) {
+if (prod) {
   plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
 }
 
@@ -19,7 +20,7 @@ module.exports = {
 
   output: {
     path: paths.dist,
-    filename: libraryName + (dev ? '.js' : '.min.js'),
+    filename: libraryName + (prod ? '.min.js' : '.js'),
     library: globalName,
     libraryTarget: 'umd'
   },
