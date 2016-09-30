@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack --progress --colors --watch",
-    "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.test.js"
+    "test": "mocha --compilers js:babel-core/register --colors --watch ./test/**/*.js"
   },
   "devDependencies": {
     "babel-core": "^6.16.0",

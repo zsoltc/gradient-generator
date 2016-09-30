@@ -1,7 +1,7 @@
-import Gradient from './gradient.js';
+import Gradient from './Gradient.js';
 
 function createGradient(stops) {
-  if (stops.length < 2) {
+  if (!stops || stops.length < 2) {
     throw 'At least 2 colors are needed to create a gradient.';
   }
 

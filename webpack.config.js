@@ -1,5 +1,5 @@
-var path = require('path');
 var webpack = require('webpack');
+var path = require('path');
 
 var prod = process.env.NODE_ENV === 'production';
 var libraryName = 'gradient-generator';
@@ -12,7 +12,7 @@ var paths = {
 };
 
 if (prod) {
-  plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
+  plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         include: paths.src,
       }
@@ -36,7 +36,7 @@ module.exports = {
 
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         include: paths.src,
         query: {
